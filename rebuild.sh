@@ -14,9 +14,6 @@ fi
 alejandra . &>/dev/null \
   || ( alejandra . ; echo "formatting failed!" && exit 1)
 
-# Shows your changes
-git diff -U0 '*.nix'
-
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
