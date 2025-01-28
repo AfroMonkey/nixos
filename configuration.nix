@@ -53,6 +53,7 @@
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "moy";
+  services.systembus-notify.enable = true;
 
   programs.firefox.enable = true;
 
