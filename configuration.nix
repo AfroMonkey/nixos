@@ -63,6 +63,8 @@
     vim
     git
     alejandra
+
+    kdePackages.kdeconnect-kde
   ];
 
   # KDE Connect
