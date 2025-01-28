@@ -1,15 +1,16 @@
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+  ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-services.fwupd.enable = true;
+  services.fwupd.enable = true;
   boot.initrd.luks.devices."luks-880e3a13-72ff-4c4c-b9d5-4986891c4b25".device = "/dev/disk/by-uuid/880e3a13-72ff-4c4c-b9d5-4986891c4b25";
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -67,10 +68,10 @@ services.fwupd.enable = true;
   users.users.moy = {
     isNormalUser = true;
     description = "moy";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -87,9 +88,9 @@ services.fwupd.enable = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-   vim 
-   git
-   alejandra
+    vim
+    git
+    alejandra
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -118,5 +119,4 @@ services.fwupd.enable = true;
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
