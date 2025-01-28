@@ -59,6 +59,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  services.flatpak.enable = true; # WIP for zen-browser
+
   environment.systemPackages = with pkgs; [
     vim
     git
