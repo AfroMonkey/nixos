@@ -12,7 +12,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   services.fwupd.enable = true;
   boot.initrd.luks.devices."luks-880e3a13-72ff-4c4c-b9d5-4986891c4b25".device = "/dev/disk/by-uuid/880e3a13-72ff-4c4c-b9d5-4986891c4b25";
-  networking.hostName = "nixos";
+  networking.hostName = "afroframe";
 
   networking.networkmanager.enable = true;
 

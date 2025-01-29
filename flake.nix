@@ -25,7 +25,7 @@
     home-manager,
     ...
   } @ inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.afroframe = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         inputs.disko.nixosModules.default
