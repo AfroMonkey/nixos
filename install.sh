@@ -9,6 +9,7 @@ HOST=afroframe
 # mkdir /mnt/etc
 # mv /home/nixos/nixos /mnt/etc/nixos
 # cp -r /mnt/etc/nixos /mnt/persist/nixos
+# TMP
 # cp -r /mnt/persist/nixos /mnt/etc/nixos
 
 # nixos-install --root /mnt --flake /mnt/etc/nixos#afroframe
