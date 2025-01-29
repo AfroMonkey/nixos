@@ -36,12 +36,12 @@
         inputs.home-manager.nixosModules.default
         inputs.impermanence.nixosModules.impermanence
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.moy = import ./home.nix;
-        }
+        # home-manager.nixosModules.home-manager
+        # {
+        #   home-manager.useGlobalPkgs = true;
+        #   home-manager.useUserPackages = true;
+        #   home-manager.users.moy = import ./home.nix;
+        # }
       ];
     };
   };
