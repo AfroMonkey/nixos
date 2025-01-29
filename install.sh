@@ -10,4 +10,7 @@ HOST=afroframe
 # mv /home/nixos/nixos /mnt/etc/nixos
 # cp -r /mnt/etc/nixos /mnt/persist/nixos
 
-nixos-install --root /mnt --flake /mnt/etc/nixos#afroframe --show-trace
+# nixos-install --root /mnt --flake /mnt/etc/nixos#afroframe
+
+sudo rm -r /etc/nixos/*
+sudo nixos-rebuild boot --flake /persist/nixos#afroframe
