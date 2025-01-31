@@ -88,6 +88,13 @@
     192.168.0.158 afropc
   '';
 
+  boot = {
+    kernelParams = [
+      "resume_offset=533760"
+    ];
+    resumeDevice = "/dev/disk/by-label/nixos";
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
