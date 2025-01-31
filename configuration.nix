@@ -83,6 +83,11 @@
     ];
     allowedUDPPortRanges = allowedTCPPortRanges;
   };
+
+  networking.extraHosts = ''
+    192.168.0.158 afropc
+  '';
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
