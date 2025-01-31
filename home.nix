@@ -20,6 +20,7 @@
     btop # replacement of htop/nmon
 
     # User
+    fish
     vscode
     warp-terminal
     chromium
@@ -44,6 +45,9 @@
     enable = true;
   };
 
+  programs.fish = {
+    enable = true;
+  };
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
