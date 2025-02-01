@@ -1,9 +1,8 @@
 {device ? throw "Set this to your disk device, e.g. /dev/sda", ...}: {
   disko.devices = {
-    disk = {
-      nvme0n1 = {
+    disk.main = {
+      inherit device;
         type = "disk";
-        device = "/dev/nvme0n1";
         content = {
           type = "gpt";
           partitions = {
@@ -25,7 +24,21 @@
               size = "100%";
               label = "luks";
               content = {
-                type = "luks";
+                type = "lvm_pv";
+                vg = "root_vg";
+              };
+            };
+          };
+        };
+      };
+      lvm_vg = {
+      root_vg = {
+        type = "lvm_vg";
+        lvs = {
+          root = {
+            size = "100%FREE";
+            content = {
+              type = "luks";
                 name = "cryptroot";
                 extraOpenArgs = [
                   "--allow-discards"
@@ -58,7 +71,6 @@
                       mountpoint = "/var/log";
                       mountOptions = ["subvol=log" "compress=zstd" "noatime"];
                     };
-                    };
                     "/tmp" = {
                       mountpoint = "/tmp";
                       mountOptions = ["subvol=tmp" "compress=zstd" "noatime"];
@@ -76,14 +88,13 @@
                       swap.swapfile.size = "64G";
                     };
                   };
-                };
               };
             };
           };
         };
       };
+      };
     };
-  };
 
   fileSystems."/persist".neededForBoot = true;
   fileSystems."/var/log".neededForBoot = true;
