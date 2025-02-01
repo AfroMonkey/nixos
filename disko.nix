@@ -58,6 +58,19 @@
                       mountpoint = "/var/log";
                       mountOptions = ["subvol=log" "compress=zstd" "noatime"];
                     };
+                    };
+                    "/tmp" = {
+                      mountpoint = "/tmp";
+                      mountOptions = ["subvol=tmp" "compress=zstd" "noatime"];
+                    };
+                    "/steam" = {
+                      mountpoint = "/steam";
+                      mountOptions = ["subvol=steam" "compress=zstd" "noatime nodatacow"];
+                    };
+                    "/docker" = {
+                      mountpoint = "/var/lib/docker";
+                      mountOptions = ["subvol=docker" "compress=zstd" "noatime nodatacow"];
+                    };
                     "/swap" = {
                       mountpoint = "/swap";
                       swap.swapfile.size = "64G";
