@@ -4,11 +4,11 @@ set -e
 pushd ~/nixos/
 
 # Early return if no changes were detected (thanks @singiamtel!)
-if git diff --quiet '*.nix'; then
-    echo "No changes detected, exiting."
-    popd
-    exit 0
-fi
+# if git diff --quiet '*.nix'; then
+#     echo "No changes detected, exiting."
+#     popd
+#     exit 0
+# fi
 
 # Autoformat your nix files
 alejandra . &>/dev/null \

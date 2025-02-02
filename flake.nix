@@ -2,9 +2,9 @@
   description = "afroflake";
 
   inputs = {
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.21.tar.gz";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     # nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2405.*";
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
 
     disko = {
       url = "github:nix-community/disko";
@@ -44,7 +44,6 @@
           home-manager.useUserPackages = true;
           home-manager.users.moy = import ./home.nix;
         }
-        fh.packages.x86_64-linux.default
         # lanzaboote.nixosModules.lanzaboote
         # ({
         #   pkgs,
