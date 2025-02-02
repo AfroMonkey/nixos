@@ -48,22 +48,8 @@
     enable = true;
   };
 
-  programs.fish = {
-    enable = true;
-  };
   programs.plasma = {
     enable = true;
-
-    hotkeys.commands."launch-konsole" = {
-      name = "Launch Konsole";
-      key = "Control+Alt+K";
-      command = "konsole";
-    };
-    hotkeys.commands."launch-warp" = {
-      name = "Launch warp";
-      key = "Control+Alt+T";
-      command = "warp";
-    };
 
     panels = [
       {

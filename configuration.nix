@@ -48,6 +48,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+  programs.fish.enable = true;
 
   users.users.moy = {
     isNormalUser = true;
@@ -57,13 +58,12 @@
     packages = with pkgs; [
       kdePackages.kate
     ];
+    shell = pkgs.fish;
   };
 
   #services.xserver.displayManager.autoLogin.enable = true;
   #services.xserver.displayManager.autoLogin.user = "moy";
   services.systembus-notify.enable = true;
-
-  programs.firefox.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
