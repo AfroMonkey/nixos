@@ -2,9 +2,9 @@
   description = "afroflake";
 
   inputs = {
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.*";
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.21.tar.gz";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    # nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2405.*";
 
     disko = {
       url = "github:nix-community/disko";
@@ -34,6 +34,9 @@
     nixosConfigurations.afroframe = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        {
+          environment.systemPackages = [fh.packages.x86_64-linux.default];
+        }
         inputs.disko.nixosModules.default
         (import ./disko.nix {device = "/dev/nvme0n1";})
         ./configuration.nix
