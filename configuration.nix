@@ -78,6 +78,7 @@
     fprintd
 
     tpm2-tss
+    # sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0 /dev/nvme0n1p2
   ];
 
   services.fprintd.enable = true;

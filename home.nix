@@ -22,6 +22,7 @@
 
     # User
     fish
+    sqlite
     vscode
     warp-terminal
     chromium
