@@ -25,6 +25,7 @@
     warp-terminal
     chromium
     steam
+    bitwarden-desktop
   ];
 
   # programs.steam = {
