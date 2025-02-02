@@ -72,7 +72,6 @@
             config = {
               General = {
                 icon = "nix-snowflake-white";
-                alphaSort = true;
               };
             };
           }
@@ -80,9 +79,9 @@
             iconTasks = {
               launchers = [
                 "applications:org.kde.dolphin.desktop"
-                "applications:app.zen_browser.zen"
-                "applications:code"
-                "applications:warp"
+                "applications:app.zen_browser.zen.desktop"
+                "applications:code.desktop"
+                "applications:warp.desktop"
               ];
             };
           }
@@ -97,7 +96,6 @@
             };
           }
         ];
-        hiding = "autohide";
       }
     ];
   };
