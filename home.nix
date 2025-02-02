@@ -29,6 +29,7 @@
     steam
     bitwarden-desktop
     ferdium
+    home-manager
   ];
 
   # programs.steam = {
