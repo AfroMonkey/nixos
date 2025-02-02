@@ -16,6 +16,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     # lanzaboote = {
     #   url = "github:nix-community/lanzaboote/v0.4.2";
 
@@ -30,12 +31,14 @@
     home-manager,
     fh,
     nix-flatpak,
+    nixos-hardware,
     # lanzaboote,
     ...
   } @ inputs: {
     nixosConfigurations.afroframe = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        nixos-hardware.nixosModules.framework-16-7040-amd
         {
           environment.systemPackages = [fh.packages.x86_64-linux.default];
         }

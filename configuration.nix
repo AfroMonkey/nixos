@@ -13,6 +13,8 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
   services.fwupd.enable = true;
@@ -34,6 +36,7 @@
   services.flatpak.packages = [
     "app.zen_browser.zen"
   ];
+  services.flatpak.update.onActivation = true;
 
   services.printing.enable = true;
 
