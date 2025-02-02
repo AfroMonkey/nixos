@@ -3,6 +3,7 @@
 
   inputs = {
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nix-flatpak.url = "https://flakehub.com/f/gmodena/nix-flatpak/0.5.2.tar.gz";
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.*";
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.21.tar.gz";
 
@@ -28,6 +29,7 @@
     nixpkgs,
     home-manager,
     fh,
+    nix-flatpak,
     # lanzaboote,
     ...
   } @ inputs: {
@@ -47,6 +49,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.moy = import ./home.nix;
         }
+        nix-flatpak.nixosModules.nix-flatpak
         # lanzaboote.nixosModules.lanzaboote
         # ({
         #   pkgs,

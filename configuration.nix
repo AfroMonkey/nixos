@@ -29,6 +29,11 @@
 
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.flatpak.enable = true;
+
+  services.flatpak.packages = [
+    "app.zen_browser.zen"
+  ];
 
   services.printing.enable = true;
 
@@ -59,12 +64,11 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  services.flatpak.enable = true; # WIP for zen-browser
-
   environment.systemPackages = with pkgs; [
     vim
     git
     alejandra
+    nixd
 
     kdePackages.kdeconnect-kde
 
