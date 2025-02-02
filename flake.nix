@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     # nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2405.*";
-    # fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
 
     disko = {
       url = "github:nix-community/disko";
