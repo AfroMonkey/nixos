@@ -14,6 +14,8 @@ pushd ~/nixos/
 alejandra . &>/dev/null \
   || ( alejandra . ; echo "formatting failed!" && exit 1)
 
+# Solo para solicitar el sudo
+sudo id &>/dev/null
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks

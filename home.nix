@@ -16,6 +16,7 @@
 
     # misc
     tree
+    ripgrep
 
     btop # replacement of htop/nmon
 
@@ -26,6 +27,7 @@
     chromium
     steam
     bitwarden-desktop
+    ferdium
   ];
 
   # programs.steam = {
@@ -86,13 +88,13 @@
             };
           }
           {
-            digitalClock = {
-              calendar.firstDayOfWeek = "sunday";
-              time.format = "24h";
+            systemTray.items = {
             };
           }
           {
-            systemTray.items = {
+            digitalClock = {
+              calendar.firstDayOfWeek = "sunday";
+              time.format = "24h";
             };
           }
         ];
