@@ -95,6 +95,7 @@
             digitalClock = {
               calendar.firstDayOfWeek = "sunday";
               time.format = "24h";
+              date.format = "isoDate";
             };
           }
         ];
