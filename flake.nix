@@ -27,7 +27,7 @@
     self,
     nixpkgs,
     home-manager,
-    # fh,
+    fh,
     # lanzaboote,
     ...
   } @ inputs: {
@@ -44,7 +44,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.moy = import ./home.nix;
         }
-        # fh.packages.x86_64-linux.default
+        fh.packages.x86_64-linux.default
         # lanzaboote.nixosModules.lanzaboote
         # ({
         #   pkgs,
