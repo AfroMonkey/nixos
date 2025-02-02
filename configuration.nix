@@ -7,7 +7,7 @@
   imports = [
     ./hardware-configuration.nix
   ];
-
+  boot.initrd.systemd.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -51,8 +51,8 @@
     ];
   };
 
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "moy";
+  #services.xserver.displayManager.autoLogin.enable = true;
+  #services.xserver.displayManager.autoLogin.user = "moy";
   services.systembus-notify.enable = true;
 
   programs.firefox.enable = true;
@@ -69,6 +69,8 @@
     kdePackages.kdeconnect-kde
 
     fprintd
+
+    tpm2-tss
   ];
 
   services.fprintd.enable = true;
