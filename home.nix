@@ -81,7 +81,7 @@
                 "applications:org.kde.dolphin.desktop"
                 "applications:app.zen_browser.zen.desktop"
                 "applications:code.desktop"
-                "applications:warp.desktop"
+                "applications:dev.warp.Warp.desktop"
               ];
             };
           }
