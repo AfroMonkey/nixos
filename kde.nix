@@ -2,7 +2,7 @@
   programs.plasma = {
     enable = true;
     shortcuts = {
-      "ActivityManager"."switch-to-activity-31ad14f6-b0ce-44ae-ad58-7020827eeb1d" = [ ];
+      "ActivityManager"."switch-to-activity-31ad14f6-b0ce-44ae-ad58-7020827eeb1d" = [];
       "KDE Keyboard Layout Switcher"."Switch to Last-Used Keyboard Layout" = "Meta+Alt+L";
       "KDE Keyboard Layout Switcher"."Switch to Next Keyboard Layout" = "Meta+Alt+K";
       "kaccess"."Toggle Screen Reader On and Off" = "Meta+Alt+S";
@@ -26,24 +26,24 @@
       "ksmserver"."Reboot Without Confirmation" = "none,,Reboot Without Confirmation";
       "ksmserver"."Shut Down" = "none,,Shut Down";
       "kwin"."Activate Window Demanding Attention" = "Meta+Ctrl+A";
-      "kwin"."Cycle Overview" = [ ];
-      "kwin"."Cycle Overview Opposite" = [ ];
+      "kwin"."Cycle Overview" = [];
+      "kwin"."Cycle Overview Opposite" = [];
       "kwin"."Decrease Opacity" = "none,,Decrease Opacity of Active Window by 5%";
       "kwin"."Edit Tiles" = "Meta+T";
       "kwin"."Expose" = "Ctrl+F9";
       "kwin"."ExposeAll" = ["Ctrl+F10" "Launch (C),Ctrl+F10" "Launch (C),Toggle Present Windows (All desktops)"];
       "kwin"."ExposeClass" = "Ctrl+F7";
-      "kwin"."ExposeClassCurrentDesktop" = [ ];
+      "kwin"."ExposeClassCurrentDesktop" = [];
       "kwin"."Grid View" = "Meta+G";
       "kwin"."Increase Opacity" = "none,,Increase Opacity of Active Window by 5%";
       "kwin"."Kill Window" = "Meta+Ctrl+Esc";
-      "kwin"."Move Tablet to Next Output" = [ ];
+      "kwin"."Move Tablet to Next Output" = [];
       "kwin"."MoveMouseToCenter" = "Meta+F6";
       "kwin"."MoveMouseToFocus" = "Meta+F5";
-      "kwin"."MoveZoomDown" = [ ];
-      "kwin"."MoveZoomLeft" = [ ];
-      "kwin"."MoveZoomRight" = [ ];
-      "kwin"."MoveZoomUp" = [ ];
+      "kwin"."MoveZoomDown" = [];
+      "kwin"."MoveZoomLeft" = [];
+      "kwin"."MoveZoomRight" = [];
+      "kwin"."MoveZoomUp" = [];
       "kwin"."Overview" = "Meta+W";
       "kwin"."Setup Window Shortcut" = "none,,Setup Window Shortcut";
       "kwin"."Show Desktop" = "Meta+D";
@@ -91,7 +91,7 @@
       "kwin"."Switch to Screen Below" = "none,,Switch to Screen Below";
       "kwin"."Switch to Screen to the Left" = "none,,Switch to Screen to the Left";
       "kwin"."Switch to Screen to the Right" = "none,,Switch to Screen to the Right";
-      "kwin"."Toggle Night Color" = [ ];
+      "kwin"."Toggle Night Color" = [];
       "kwin"."Toggle Window Raise/Lower" = "none,,Toggle Window Raise/Lower";
       "kwin"."Walk Through Windows" = "Alt+Tab";
       "kwin"."Walk Through Windows (Reverse)" = "Alt+Shift+Tab";
@@ -196,7 +196,7 @@
       "org_kde_powerdevil"."PowerOff" = "Power Off";
       "org_kde_powerdevil"."Sleep" = "Sleep";
       "org_kde_powerdevil"."Toggle Keyboard Backlight" = "Keyboard Light On/Off";
-      "org_kde_powerdevil"."Turn Off Screen" = [ ];
+      "org_kde_powerdevil"."Turn Off Screen" = [];
       "org_kde_powerdevil"."powerProfile" = ["Battery" "Meta+B,Battery" "Meta+B,Switch Power Profile"];
       "plasmashell"."activate application launcher" = ["Meta" "Alt+F1,Meta" "Alt+F1,Activate Application Launcher"];
       "plasmashell"."activate task manager entry 1" = "Meta+1";
@@ -234,12 +234,12 @@
       "kactivitymanagerdrc"."main"."currentActivity" = "31ad14f6-b0ce-44ae-ad58-7020827eeb1d";
       "kded5rc"."Module-browserintegrationreminder"."autoload" = false;
       "kded5rc"."Module-device_automounter"."autoload" = false;
-      "kdeglobals"."WM"."activeBackground" = "227,229,231";
-      "kdeglobals"."WM"."activeBlend" = "227,229,231";
-      "kdeglobals"."WM"."activeForeground" = "35,38,41";
-      "kdeglobals"."WM"."inactiveBackground" = "239,240,241";
-      "kdeglobals"."WM"."inactiveBlend" = "239,240,241";
-      "kdeglobals"."WM"."inactiveForeground" = "112,125,138";
+      "kdeglobals"."WM"."activeBackground" = "49,54,59";
+      "kdeglobals"."WM"."activeBlend" = "252,252,252";
+      "kdeglobals"."WM"."activeForeground" = "252,252,252";
+      "kdeglobals"."WM"."inactiveBackground" = "42,46,50";
+      "kdeglobals"."WM"."inactiveBlend" = "161,169,177";
+      "kdeglobals"."WM"."inactiveForeground" = "161,169,177";
       "ksmserverrc"."General"."loginMode" = "emptySession";
       "kwalletrc"."Wallet"."Close When Idle" = false;
       "kwalletrc"."Wallet"."Close on Screensaver" = false;
@@ -259,10 +259,12 @@
       "kwinrc"."Tiling"."padding" = 4;
       "kwinrc"."Tiling/08418d8e-e29c-5042-8e3b-12a0bc1fc0d1"."tiles" = "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
       "kwinrc"."Xwayland"."Scale" = 1.5;
+      "kxkbrc"."Layout"."LayoutList" = "us";
+      "kxkbrc"."Layout"."Use" = true;
+      "kxkbrc"."Layout"."VariantList" = "altgr-intl";
       "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
     };
     dataFile = {
-
     };
   };
 }

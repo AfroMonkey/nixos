@@ -49,6 +49,59 @@
   programs.fish = {
     enable = true;
   };
+  programs.plasma = {
+    enable = true;
+
+    hotkeys.commands."launch-konsole" = {
+      name = "Launch Konsole";
+      key = "Control+Alt+K";
+      command = "konsole";
+    };
+    hotkeys.commands."launch-warp" = {
+      name = "Launch warp";
+      key = "Control+Alt+T";
+      command = "warp";
+    };
+
+    panels = [
+      {
+        location = "bottom";
+        widgets = [
+          {
+            name = "org.kde.plasma.kickoff";
+            config = {
+              General = {
+                icon = "nix-snowflake-white";
+                alphaSort = true;
+              };
+            };
+          }
+          {
+            iconTasks = {
+              launchers = [
+                "applications:org.kde.dolphin.desktop"
+                "applications:app.zen_browser.zen"
+                "applications:code"
+                "applications:warp"
+              ];
+            };
+          }
+          {
+            digitalClock = {
+              calendar.firstDayOfWeek = "sunday";
+              time.format = "24h";
+            };
+          }
+          {
+            systemTray.items = {
+            };
+          }
+        ];
+        hiding = "autohide";
+      }
+    ];
+  };
+
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
