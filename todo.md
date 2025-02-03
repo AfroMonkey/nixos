@@ -13,3 +13,9 @@
     - bitwarden
     - paginas
 - vscode
+-
+# config
+- pgcli
+- ssh
+- fish
+- starship

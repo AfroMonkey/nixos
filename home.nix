@@ -31,6 +31,7 @@
     ferdium
     # home-manager # wip
     pgcli
+    yakuake
   ];
 
   # programs.steam = {
