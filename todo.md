@@ -19,3 +19,4 @@
 - ssh
 - fish
 - starship
+- historial de comandos

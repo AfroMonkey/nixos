@@ -18,6 +18,9 @@ alejandra . &>/dev/null \
 sudo id &>/dev/null
 echo "NixOS Rebuilding..."
 
+# update flake inputs
+nix flake update
+
 # Rebuild, output simplified errors, log trackebacks
 sudo nixos-rebuild switch --flake /home/moy/nixos &>nixos-switch.log || (cat nixos-switch.log | grep --color error && exit 1)
 
