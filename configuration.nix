@@ -65,6 +65,9 @@
   #services.xserver.displayManager.autoLogin.user = "moy";
   services.systembus-notify.enable = true;
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [

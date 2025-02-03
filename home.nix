@@ -29,7 +29,8 @@
     steam
     bitwarden-desktop
     ferdium
-    home-manager
+    # home-manager # wip
+    pgcli
   ];
 
   # programs.steam = {
