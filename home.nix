@@ -35,6 +35,7 @@
 
     # development
     poetry
+    uv
   ];
 
   # programs.steam = {
