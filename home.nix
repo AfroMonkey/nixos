@@ -32,6 +32,9 @@
     # home-manager # wip
     pgcli
     yakuake
+
+    # development
+    poetry
   ];
 
   # programs.steam = {
