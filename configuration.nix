@@ -91,6 +91,7 @@
     # sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0 /dev/nvme0n1p2
     btrfs-assistant
   ];
+  programs.dconf.enable = true;
 
   services.fprintd.enable = true;
 
