@@ -90,8 +90,18 @@
     tpm2-tss
     # sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0 /dev/nvme0n1p2
     btrfs-assistant
+    snapper
+    snapper-gui
   ];
   programs.dconf.enable = true;
+  services.snapper.configs = {
+    home = {
+      SUBVOLUME = "/home";
+      ALLOW_USERS = ["moy"];
+      TIMELINE_CREATE = true;
+      TIMELINE_CLEANUP = true;
+    };
+  };
 
   services.fprintd.enable = true;
 
