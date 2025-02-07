@@ -115,6 +115,7 @@
     };
   };
   services.snapper.persistentTimer = true;
+  services.btrfs.autoScrub.enable = true;
 
   services.fprintd.enable = true;
 
