@@ -83,6 +83,11 @@
           }
           {
             systemTray.items = {
+              shown = [
+              ];
+              hidden = [
+                "org.kde.yakuake"
+              ];
             };
           }
           {
