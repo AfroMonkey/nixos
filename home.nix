@@ -32,6 +32,7 @@
     # home-manager # wip
     pgcli
     yakuake
+    maestral-gui
 
     # development
     poetry
