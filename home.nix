@@ -83,15 +83,6 @@
             };
           }
           {
-            systemTray.items = {
-              shown = [
-              ];
-              hidden = [
-                "org.kde.yakuake"
-              ];
-            };
-          }
-          {
             digitalClock = {
               calendar.firstDayOfWeek = "sunday";
               time.format = "24h";
@@ -101,6 +92,17 @@
         ];
       }
     ];
+  };
+
+  systemd.user.services.maestral = {
+    Unit.Description = "Maestral daemon";
+    Install.WantedBy = ["default.target"];
+    Service = {
+      ExecStart = "${pkgs.maestral-gui}/bin/maestral start -f";
+      ExecStop = "${pkgs.maestral-gui}/bin/maestral stop";
+      Restart = "on-failure";
+      Nice = 10;
+    };
   };
 
   # This value determines the home Manager release that your
