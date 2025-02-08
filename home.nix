@@ -32,7 +32,7 @@
     # home-manager # wip
     pgcli
     yakuake
-    maestral-gui
+    maestral
 
     # development
     poetry
@@ -98,8 +98,8 @@
     Unit.Description = "Maestral daemon";
     Install.WantedBy = ["default.target"];
     Service = {
-      ExecStart = "${pkgs.maestral-gui}/bin/maestral start -f";
-      ExecStop = "${pkgs.maestral-gui}/bin/maestral stop";
+      ExecStart = "${pkgs.maestral}/bin/maestral start -f";
+      ExecStop = "${pkgs.maestral}/bin/maestral stop";
       Restart = "on-failure";
       Nice = 10;
     };
