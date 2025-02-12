@@ -57,46 +57,46 @@
     enable = true;
   };
 
-  programs.plasma = {
-    enable = true;
+  # programs.plasma = {
+  #   enable = true;
 
-    panels = [
-      {
-        location = "bottom";
-        widgets = [
-          {
-            name = "org.kde.plasma.kickoff";
-            config = {
-              General = {
-                icon = "nix-snowflake-white";
-              };
-            };
-          }
-          {
-            iconTasks = {
-              launchers = [
-                "applications:org.kde.dolphin.desktop"
-                "applications:app.zen_browser.zen.desktop"
-                "applications:code.desktop"
-                "applications:dev.warp.Warp.desktop"
-              ];
-            };
-          }
-          {
-            systemTray.items = {
-            };
-          }
-          {
-            digitalClock = {
-              calendar.firstDayOfWeek = "sunday";
-              time.format = "24h";
-              date.format = "isoDate";
-            };
-          }
-        ];
-      }
-    ];
-  };
+  #   panels = [
+  #     {
+  #       location = "bottom";
+  #       widgets = [
+  #         {
+  #           name = "org.kde.plasma.kickoff";
+  #           config = {
+  #             General = {
+  #               icon = "nix-snowflake-white";
+  #             };
+  #           };
+  #         }
+  #         {
+  #           iconTasks = {
+  #             launchers = [
+  #               "applications:org.kde.dolphin.desktop"
+  #               "applications:app.zen_browser.zen.desktop"
+  #               "applications:code.desktop"
+  #               "applications:dev.warp.Warp.desktop"
+  #             ];
+  #           };
+  #         }
+  #         {
+  #           systemTray.items = {
+  #           };
+  #         }
+  #         {
+  #           digitalClock = {
+  #             calendar.firstDayOfWeek = "sunday";
+  #             time.format = "24h";
+  #             date.format = "isoDate";
+  #           };
+  #         }
+  #       ];
+  #     }
+  #   ];
+  # };
 
   systemd.user.services.maestral = {
     Unit.Description = "Maestral daemon";
