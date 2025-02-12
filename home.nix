@@ -83,6 +83,10 @@
             };
           }
           {
+            systemTray.items = {
+            };
+          }
+          {
             digitalClock = {
               calendar.firstDayOfWeek = "sunday";
               time.format = "24h";

@@ -134,12 +134,12 @@
     192.168.0.158 afropc
   '';
 
-  boot = {
-    kernelParams = [
-      "resume_offset=533760"
-    ];
-    resumeDevice = "/dev/disk/by-label/nixos";
-  };
+  # boot = {
+  #   kernelParams = [
+  #     "resume_offset=533760"
+  #   ];
+  #   resumeDevice = "/dev/disk/by-label/nixos";
+  # };
 
   system.autoUpgrade = {
     enable = true;
