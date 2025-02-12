@@ -22,6 +22,7 @@
       inputs.home-manager.follows = "home-manager";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    lan-mouse.url = "github:feschber/lan-mouse";
     # lanzaboote = {
     #   url = "github:nix-community/lanzaboote/v0.4.2";
 
@@ -38,7 +39,8 @@
     nix-flatpak,
     nixos-hardware,
     plasma-manager,
-    # lanzaboote,
+    disko,
+    lan-mouse,
     ...
   } @ inputs: {
     nixosConfigurations.afroframe = nixpkgs.lib.nixosSystem {
@@ -60,28 +62,6 @@
           home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
         }
         nix-flatpak.nixosModules.nix-flatpak
-        # lanzaboote.nixosModules.lanzaboote
-        # ({
-        #   pkgs,
-        #   lib,
-        #   ...
-        # }: {
-        #   environment.systemPackages = [
-        #     # For debugging and troubleshooting Secure Boot.
-        #     pkgs.sbctl
-        #   ];
-
-        #   # Lanzaboote currently replaces the systemd-boot module.
-        #   # This setting is usually set to true in configuration.nix
-        #   # generated at installation time. So we force it to false
-        #   # for now.
-        #   boot.loader.systemd-boot.enable = lib.mkForce false;
-
-        #   boot.lanzaboote = {
-        #     enable = true;
-        #     pkiBundle = "/var/lib/sbctl";
-        #   };
-        # })
       ];
     };
   };
