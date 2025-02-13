@@ -59,6 +59,18 @@
     };
   };
 
+  systemd.user.services.lan-mouse = {
+    Unit.Description = "Lan Mouse";
+    Unit.BindsTo = ["graphical-session.target"];
+
+    Install.WantedBy = ["graphical-session.target"];
+    Service = {
+      ExecStart = "${pkgs.lan-mouse}/bin/lan-mouse --daemon";
+      Restart = "on-failure";
+      Nice = 10;
+    };
+  };
+
   home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;
