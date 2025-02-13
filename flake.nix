@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs-stable.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.*";
     nix-flatpak.url = "https://flakehub.com/f/gmodena/nix-flatpak/0.5.2.tar.gz";
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.21.tar.gz";
 
@@ -23,12 +22,6 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     lan-mouse.url = "github:feschber/lan-mouse";
-    # lanzaboote = {
-    #   url = "github:nix-community/lanzaboote/v0.4.2";
-
-    #   # Optional but recommended to limit the size of your system closure.
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
   };
 
   outputs = {
@@ -56,10 +49,12 @@
 
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.moy = import ./home.nix;
-          home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.moy = import ./home.nix;
+            sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
+          };
         }
         nix-flatpak.nixosModules.nix-flatpak
       ];

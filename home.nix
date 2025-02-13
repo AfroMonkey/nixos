@@ -31,7 +31,6 @@
     pgcli
     yakuake
     maestral
-    lan-mouse
 
     # development
     poetry
