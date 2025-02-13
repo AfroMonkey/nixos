@@ -21,7 +21,6 @@
       inputs.home-manager.follows = "home-manager";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    lan-mouse.url = "github:feschber/lan-mouse";
   };
 
   outputs = {
@@ -33,7 +32,6 @@
     nixos-hardware,
     plasma-manager,
     disko,
-    lan-mouse,
     ...
   } @ inputs: {
     nixosConfigurations.afroframe = nixpkgs.lib.nixosSystem {
