@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.*";
     nix-flatpak.url = "https://flakehub.com/f/gmodena/nix-flatpak/0.5.2.tar.gz";
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.21.tar.gz";
 

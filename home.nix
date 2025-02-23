@@ -32,6 +32,7 @@
     yakuake
     maestral
     lan-mouse
+    discord
 
     # development
     poetry

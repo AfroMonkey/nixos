@@ -40,15 +40,16 @@
 
   services.printing.enable = true;
 
-  services.pulseaudio.enable = false;
+  # services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    pulse.enable = true;
+    # pulse.enable = true;
   };
   programs.fish.enable = true;
+  documentation.man.generateCaches = false;
 
   users.users.moy = {
     isNormalUser = true;
