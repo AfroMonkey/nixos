@@ -29,7 +29,7 @@
     ferdium
     # home-manager # wip
     pgcli
-    yakuake
+    kdePackages.yakuake
     maestral
     lan-mouse
     discord
@@ -37,6 +37,11 @@
     # development
     poetry
     uv
+    # Language
+    aspellDicts.en
+    aspellDicts.en-computers
+    aspellDicts.en-science
+    aspellDicts.es
   ];
 
   programs.git = {
