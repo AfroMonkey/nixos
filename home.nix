@@ -27,6 +27,7 @@
     steam
     bitwarden-desktop
     ferdium
+    vlc
     # home-manager # wip
     pgcli
     kdePackages.yakuake
