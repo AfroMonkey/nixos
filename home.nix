@@ -28,6 +28,7 @@
     bitwarden-desktop
     ferdium
     vlc
+    kdePackages.filelight
     # home-manager # wip
     pgcli
     kdePackages.yakuake
