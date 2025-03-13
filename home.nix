@@ -29,6 +29,7 @@
     ferdium
     vlc
     kdePackages.filelight
+    obsidian
     # home-manager # wip
     pgcli
     kdePackages.yakuake
