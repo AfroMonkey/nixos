@@ -40,6 +40,9 @@
     # development
     poetry
     uv
+    ## ezaudita
+    python3Packages.psycopg-c
+
     # Language
     aspellDicts.en
     aspellDicts.en-computers
