@@ -120,6 +120,10 @@
 
   services.fprintd.enable = true;
 
+  services.postgresql = {
+    enable = true;
+  };
+
   # KDE Connect
   networking.firewall = rec {
     allowedTCPPortRanges = [

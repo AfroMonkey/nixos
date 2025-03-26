@@ -36,7 +36,6 @@
     maestral
     lan-mouse
     discord
-    postgresql
 
     # development
     poetry
