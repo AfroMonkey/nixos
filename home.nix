@@ -40,7 +40,7 @@
     # development
     poetry
     uv
-    nodejs
+    claude-code
     ## ezaudita
     python3Packages.psycopg-c
 
