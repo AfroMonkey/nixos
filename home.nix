@@ -40,6 +40,7 @@
     # development
     poetry
     uv
+    nodejs
     ## ezaudita
     python3Packages.psycopg-c
 
