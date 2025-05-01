@@ -43,6 +43,7 @@
     claude-code
     ## ezaudita
     python3Packages.psycopg-c
+    direnv
 
     # Language
     aspellDicts.en
